@@ -20,6 +20,7 @@ public class UserServiceTest {
     private final Connection connection;
 
     private final String testName = "Will";
+
     private final String testLastName = "Smith";
     private final byte testAge = 40;
 
@@ -129,7 +130,7 @@ public class UserServiceTest {
         assertEquals(0, result);
     }
     @Test
-    public void existsByFirstName() {
+    public void existsByFirstName() throws SQLException {
         // given
         saveNewUser("Muhammed", "Allanov", (byte) 23);
 
