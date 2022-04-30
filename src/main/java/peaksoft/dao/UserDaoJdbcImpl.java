@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDaoJdbcImpl implements UserDao {
+public class UserDaoJdbcImpl  {
 
     private final Connection connection;
 
@@ -46,6 +46,16 @@ public class UserDaoJdbcImpl implements UserDao {
 
     }
 
+
+
+    public void createUsersTable(User user) {
+
+    }
+
+
+    public void dropUsersTable(User user) {
+
+    }
 
     public void saveUser(String name, String lastName, byte age) {
         String query = """
@@ -95,6 +105,11 @@ public class UserDaoJdbcImpl implements UserDao {
             throw new RuntimeException(e);
         }
         return getAllUsers();
+    }
+
+
+    public void cleanUsersTable(User users) {
+
     }
 
 
